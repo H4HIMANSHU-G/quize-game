@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #e4e4e4;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+li.selected {
+    background-color: #a2d2ff;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#timer {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark .quiz-container {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px #333;
+}
+
+body.dark button {
+    background-color: #007bff;
+}
+
+body.dark button:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle Switch for Dark Mode */
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 2px; /* Corrected value */
+    left: 2px; /* Corrected value */
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* When the switch is checked */
+.switch input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+.switch input:checked + .slider {
+    background-color: #4CAF50;
+}

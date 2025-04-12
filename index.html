@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <!-- Dark Mode Toggle -->
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+    
+    <h1>Quiz App</h1>
+    <div id="timer">Time Left: 10s</div>
+    <div id="question">Question will appear here</div>
+    <ul id="answers"></ul>
+    <button id="next">Next</button>
+    
+    <div id="result" class="hidden"></div>
+    <button id="tryAgain" class="hidden">Try Again</button>
+
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+  <!-- Link to the JS File -->
+  <script src="script.js"></script>
+</body>
+</html>
+
